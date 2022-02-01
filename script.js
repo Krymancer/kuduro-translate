@@ -9,7 +9,7 @@ function translate(){
   ptTextArea.value = ptTextArea.value.toLowerCase();
   const ptText = ptTextArea.value;
   
-  const kuText = ptText.split(' ').map(word => {
+  const kuText = ptText.split(/\s+/).map(word => {
     const wordData = ask(word);
     
     if(wordData){
